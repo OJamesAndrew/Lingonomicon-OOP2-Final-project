@@ -1,0 +1,571 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 29, 2025 at 09:13 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `lingonomiconschema`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `languagedata`
+--
+
+CREATE TABLE `languagedata` (
+  `id` int(11) NOT NULL,
+  `lang` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `eng_ans` varchar(255) NOT NULL,
+  `fake_ans1` varchar(255) NOT NULL,
+  `fake_ans2` varchar(255) NOT NULL,
+  `fake_ans3` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `languagedata`
+--
+
+INSERT INTO `languagedata` (`id`, `lang`, `category`, `question`, `eng_ans`, `fake_ans1`, `fake_ans2`, `fake_ans3`) VALUES
+(1, 'Spanish', 'Vocabulary', 'gato', 'cat', 'dog', 'rabbit', 'mouse'),
+(2, 'Spanish', 'Vocabulary', 'perro', 'dog', 'cat', 'rabbit', 'horse'),
+(3, 'Spanish', 'Vocabulary', 'comer', 'to eat', 'to drink', 'to cook', 'to bite'),
+(4, 'Spanish', 'Vocabulary', 'beber', 'to drink', 'to eat', 'to cook', 'to read'),
+(5, 'Spanish', 'Vocabulary', 'casa', 'house', 'building', 'apartment', 'street'),
+(6, 'Spanish', 'Vocabulary', 'libro', 'book', 'notebook', 'magazine', 'newspaper'),
+(7, 'Spanish', 'Vocabulary', 'escuela', 'school', 'university', 'library', 'classroom'),
+(8, 'Spanish', 'Vocabulary', 'correr', 'to run', 'to walk', 'to jump', 'to dance'),
+(9, 'Spanish', 'Vocabulary', 'caminar', 'to walk', 'to run', 'to drive', 'to swim'),
+(10, 'Spanish', 'Vocabulary', 'hablar', 'to speak', 'to listen', 'to read', 'to write'),
+(11, 'Spanish', 'Vocabulary', 'escribir', 'to write', 'to read', 'to draw', 'to speak'),
+(12, 'Spanish', 'Vocabulary', 'leer', 'to read', 'to write', 'to watch', 'to listen'),
+(13, 'Spanish', 'Vocabulary', 'mesa', 'table', 'chair', 'desk', 'bench'),
+(14, 'Spanish', 'Vocabulary', 'silla', 'chair', 'table', 'sofa', 'bed'),
+(15, 'Spanish', 'Vocabulary', 'puerta', 'door', 'window', 'wall', 'floor'),
+(16, 'Spanish', 'Vocabulary', 'ventana', 'window', 'door', 'wall', 'roof'),
+(17, 'Spanish', 'Vocabulary', 'amigo', 'friend', 'brother', 'neighbor', 'coworker'),
+(18, 'Spanish', 'Vocabulary', 'familia', 'family', 'friends', 'neighbors', 'coworkers'),
+(19, 'Spanish', 'Vocabulary', 'coche', 'car', 'bike', 'bus', 'truck'),
+(20, 'Spanish', 'Vocabulary', 'bicicleta', 'bicycle', 'motorcycle', 'scooter', 'car'),
+(21, 'Spanish', 'Vocabulary', 'tren', 'train', 'plane', 'car', 'boat'),
+(22, 'Spanish', 'Vocabulary', 'avión', 'airplane', 'boat', 'train', 'bus'),
+(23, 'Spanish', 'Vocabulary', 'barco', 'boat', 'ship', 'submarine', 'plane'),
+(24, 'Spanish', 'Vocabulary', 'trabajar', 'to work', 'to study', 'to rest', 'to play'),
+(25, 'Spanish', 'Vocabulary', 'estudiar', 'to study', 'to learn', 'to work', 'to rest'),
+(26, 'Spanish', 'Vocabulary', 'jugar', 'to play', 'to run', 'to study', 'to jump'),
+(27, 'Spanish', 'Vocabulary', 'nadar', 'to swim', 'to dive', 'to surf', 'to row'),
+(28, 'Spanish', 'Vocabulary', 'cantar', 'to sing', 'to dance', 'to act', 'to play'),
+(29, 'Spanish', 'Vocabulary', 'bailar', 'to dance', 'to sing', 'to jump', 'to swim'),
+(30, 'Spanish', 'Vocabulary', 'mirar', 'to watch', 'to see', 'to listen', 'to observe'),
+(31, 'Spanish', 'Vocabulary', 'escuchar', 'to listen', 'to hear', 'to speak', 'to read'),
+(32, 'Spanish', 'Vocabulary', 'comida', 'food', 'meal', 'drink', 'dish'),
+(33, 'Spanish', 'Vocabulary', 'bebida', 'drink', 'food', 'snack', 'meal'),
+(34, 'Spanish', 'Vocabulary', 'desayuno', 'breakfast', 'lunch', 'dinner', 'snack'),
+(35, 'Spanish', 'Vocabulary', 'almuerzo', 'lunch', 'breakfast', 'dinner', 'snack'),
+(36, 'Spanish', 'Vocabulary', 'cena', 'dinner', 'lunch', 'breakfast', 'dessert'),
+(37, 'Spanish', 'Vocabulary', 'agua', 'water', 'milk', 'juice', 'soda'),
+(38, 'Spanish', 'Vocabulary', 'leche', 'milk', 'juice', 'water', 'soda'),
+(39, 'Spanish', 'Vocabulary', 'jugo', 'juice', 'soda', 'milk', 'water'),
+(40, 'Spanish', 'Vocabulary', 'cielo', 'sky', 'cloud', 'sun', 'moon'),
+(41, 'Spanish', 'Vocabulary', 'sol', 'sun', 'moon', 'star', 'planet'),
+(42, 'Spanish', 'Vocabulary', 'luna', 'moon', 'sun', 'star', 'planet'),
+(43, 'Spanish', 'Vocabulary', 'estrella', 'star', 'moon', 'sun', 'planet'),
+(44, 'Spanish', 'Vocabulary', 'mar', 'sea', 'lake', 'river', 'ocean'),
+(45, 'Spanish', 'Vocabulary', 'río', 'river', 'lake', 'sea', 'stream'),
+(46, 'Spanish', 'Vocabulary', 'montaña', 'mountain', 'hill', 'cliff', 'volcano'),
+(47, 'Spanish', 'Vocabulary', 'bosque', 'forest', 'jungle', 'garden', 'park'),
+(48, 'Spanish', 'Vocabulary', 'ciudad', 'city', 'town', 'village', 'capital'),
+(49, 'Spanish', 'Vocabulary', 'pueblo', 'town', 'city', 'village', 'state'),
+(50, 'Spanish', 'Vocabulary', 'parque', 'park', 'garden', 'forest', 'playground'),
+(51, 'Spanish', 'Phrases', '¿Cómo estás?', 'How are you?', 'Where are you?', 'Who are you?', 'What are you doing?'),
+(52, 'Spanish', 'Phrases', '¿Qué hora es?', 'What time is it?', 'Where is it?', 'When is it?', 'What day is it?'),
+(53, 'Spanish', 'Phrases', '¿Dónde vives?', 'Where do you live?', 'Where do you work?', 'Where are you going?', 'Where do you study?'),
+(54, 'Spanish', 'Phrases', '¿Cuántos años tienes?', 'How old are you?', 'What is your birthday?', 'Where were you born?', 'How tall are you?'),
+(55, 'Spanish', 'Phrases', '¿Qué haces?', 'What are you doing?', 'Where are you going?', 'Who are you calling?', 'Why are you running?'),
+(56, 'Spanish', 'Phrases', '¿Hablas inglés?', 'Do you speak English?', 'Do you understand English?', 'Can you write in English?', 'Do you teach English?'),
+(57, 'Spanish', 'Phrases', '¿Puedes ayudarme?', 'Can you help me?', 'Can you call me?', 'Can you find me?', 'Can you bring me?'),
+(58, 'Spanish', 'Phrases', 'No entiendo', 'I don\'t understand', 'I don\'t know', 'I don\'t see', 'I don\'t hear'),
+(59, 'Spanish', 'Phrases', '¿Dónde está el baño?', 'Where is the bathroom?', 'Where is the bedroom?', 'Where is the kitchen?', 'Where is the hotel?'),
+(60, 'Spanish', 'Phrases', '¿Cuánto cuesta?', 'How much does it cost?', 'How many are there?', 'Where is it?', 'What is it?'),
+(61, 'Spanish', 'Phrases', 'Estoy perdido', 'I am lost', 'I am late', 'I am tired', 'I am scared'),
+(62, 'Spanish', 'Phrases', 'Me gusta', 'I like it', 'I need it', 'I want it', 'I have it'),
+(63, 'Spanish', 'Phrases', 'No me gusta', 'I don\'t like it', 'I don\'t want it', 'I don\'t need it', 'I don\'t have it'),
+(64, 'Spanish', 'Phrases', 'Tengo hambre', 'I am hungry', 'I am tired', 'I am sick', 'I am bored'),
+(65, 'Spanish', 'Phrases', 'Tengo sed', 'I am thirsty', 'I am sleepy', 'I am cold', 'I am sick'),
+(66, 'Spanish', 'Phrases', 'Estoy cansado', 'I am tired', 'I am hungry', 'I am thirsty', 'I am sick'),
+(67, 'Spanish', 'Phrases', 'Estoy enfermo', 'I am sick', 'I am tired', 'I am cold', 'I am hurt'),
+(68, 'Spanish', 'Phrases', '¿Qué recomiendas?', 'What do you recommend?', 'What do you like?', 'What do you want?', 'What do you have?'),
+(69, 'Spanish', 'Phrases', 'La cuenta, por favor', 'The bill, please', 'The menu, please', 'The food, please', 'The water, please'),
+(70, 'Spanish', 'Phrases', '¿Puedo pagar con tarjeta?', 'Can I pay with card?', 'Can I pay in cash?', 'Can I pay later?', 'Can I pay online?'),
+(71, 'Spanish', 'Phrases', '¿Hay Wi-Fi aquí?', 'Is there Wi-Fi here?', 'Is there internet here?', 'Is there a signal here?', 'Is there electricity here?'),
+(72, 'Spanish', 'Phrases', 'Estoy de vacaciones', 'I am on vacation', 'I am at work', 'I am traveling', 'I am resting'),
+(73, 'Spanish', 'Phrases', '¿A qué hora abre?', 'What time does it open?', 'What time does it close?', 'When is it available?', 'Where is the entrance?'),
+(74, 'Spanish', 'Phrases', '¿A qué hora cierra?', 'What time does it close?', 'What time does it open?', 'When is it available?', 'Where is the exit?'),
+(75, 'Spanish', 'Phrases', 'Feliz cumpleaños', 'Happy birthday', 'Happy holidays', 'Congratulations', 'Good luck'),
+(76, 'Spanish', 'Phrases', 'Feliz año nuevo', 'Happy new year', 'Happy birthday', 'Merry Christmas', 'Congratulations'),
+(77, 'Spanish', 'Phrases', 'Feliz navidad', 'Merry Christmas', 'Happy New Year', 'Happy birthday', 'Congratulations'),
+(78, 'Spanish', 'Phrases', 'Buena suerte', 'Good luck', 'Good night', 'Good morning', 'Congratulations'),
+(79, 'Spanish', 'Phrases', 'Buen viaje', 'Have a good trip', 'Good luck', 'Good day', 'Good night'),
+(80, 'Spanish', 'Phrases', 'Nos vemos pronto', 'See you soon', 'See you tomorrow', 'See you later', 'See you again'),
+(81, 'Spanish', 'Phrases', 'Hasta luego', 'See you later', 'See you soon', 'Goodbye', 'See you tomorrow'),
+(82, 'Spanish', 'Phrases', 'Hasta mañana', 'See you tomorrow', 'See you soon', 'Good night', 'See you next week'),
+(83, 'Spanish', 'Phrases', 'Buenas noches', 'Good night', 'Good morning', 'Good afternoon', 'Goodbye'),
+(84, 'Spanish', 'Phrases', 'Buenos días', 'Good morning', 'Good afternoon', 'Good evening', 'Good night'),
+(85, 'Spanish', 'Phrases', 'Buenas tardes', 'Good afternoon', 'Good morning', 'Good night', 'Goodbye'),
+(86, 'Spanish', 'Phrases', '¿Cómo te llamas?', 'What is your name?', 'How are you?', 'Where are you from?', 'Who are you?'),
+(87, 'Spanish', 'Phrases', 'Me llamo...', 'My name is...', 'I am from...', 'I live in...', 'I study at...'),
+(88, 'Spanish', 'Phrases', '¿De dónde eres?', 'Where are you from?', 'Where do you live?', 'Where are you going?', 'Where were you born?'),
+(89, 'Spanish', 'Phrases', 'Soy de...', 'I am from...', 'I live in...', 'I am going to...', 'I was born in...'),
+(90, 'Spanish', 'Phrases', 'Mucho gusto', 'Nice to meet you', 'See you soon', 'Good luck', 'Have a good day'),
+(91, 'Spanish', 'Sayings', 'Más vale tarde que nunca', 'Better late than never', 'The early bird catches the worm', 'A stitch in time saves nine', 'Time is money'),
+(92, 'Spanish', 'Sayings', 'A caballo regalado no se le mira el diente', 'Don\'t look a gift horse in the mouth', 'You can\'t judge a book by its cover', 'The early bird gets the worm', 'You reap what you sow'),
+(93, 'Spanish', 'Sayings', 'Ojos que no ven, corazón que no siente', 'Out of sight, out of mind', 'Seeing is believing', 'Love conquers all', 'No pain, no gain'),
+(94, 'Spanish', 'Sayings', 'Al mal tiempo, buena cara', 'Put on a brave face in bad times', 'Bad luck comes in threes', 'What goes around comes around', 'Time heals all wounds'),
+(95, 'Spanish', 'Sayings', 'Más sabe el diablo por viejo que por diablo', 'Wisdom comes with age', 'Experience is the best teacher', 'Old habits die hard', 'Better safe than sorry'),
+(96, 'Spanish', 'Sayings', 'El que madruga, Dios lo ayuda', 'The early bird gets the worm', 'He who hesitates is lost', 'Time waits for no one', 'You can\'t win them all'),
+(97, 'Spanish', 'Sayings', 'No hay mal que por bien no venga', 'Every cloud has a silver lining', 'Misery loves company', 'When it rains, it pours', 'What doesn\'t kill you makes you stronger'),
+(98, 'Spanish', 'Sayings', 'Cría cuervos y te sacarán los ojos', 'Raise crows and they\'ll peck your eyes out', 'You reap what you sow', 'Bite the hand that feeds you', 'A wolf in sheep\'s clothing'),
+(99, 'Spanish', 'Sayings', 'Dime con quién andas y te diré quién eres', 'Tell me who your friends are and I\'ll tell you who you are', 'Birds of a feather flock together', 'Actions speak louder than words', 'You are what you eat'),
+(100, 'Spanish', 'Sayings', 'En boca cerrada no entran moscas', 'Silence is golden', 'Loose lips sink ships', 'The pen is mightier than the sword', 'Speak now or forever hold your peace'),
+(101, 'Spanish', 'Sayings', 'No dejes para mañana lo que puedas hacer hoy', 'Don\'t put off until tomorrow what you can do today', 'Strike while the iron is hot', 'Time is money', 'One step at a time'),
+(102, 'Spanish', 'Sayings', 'Cuando el río suena, agua lleva', 'Where there\'s smoke, there\'s fire', 'Still waters run deep', 'A rolling stone gathers no moss', 'The calm before the storm'),
+(103, 'Spanish', 'Sayings', 'Perro que ladra no muerde', 'Barking dogs seldom bite', 'Curiosity killed the cat', 'A bird in the hand is worth two in the bush', 'Slow and steady wins the race'),
+(104, 'Spanish', 'Sayings', 'A quien madruga, Dios le ayuda', 'The early bird gets the worm', 'You reap what you sow', 'Practice makes perfect', 'You can\'t have it all'),
+(105, 'Spanish', 'Sayings', 'Hablando del rey de Roma, por la puerta asoma', 'Speak of the devil', 'Talk of the town', 'A penny for your thoughts', 'A stitch in time saves nine'),
+(106, 'Spanish', 'Sayings', 'El mundo es un pañuelo', 'It\'s a small world', 'The world is your oyster', 'A house divided cannot stand', 'Big fish in a small pond'),
+(107, 'Spanish', 'Sayings', 'Barriga llena, corazón contento', 'Full belly, happy heart', 'The way to a man\'s heart is through his stomach', 'Better safe than sorry', 'Out of sight, out of mind'),
+(108, 'Spanish', 'Sayings', 'Más vale prevenir que curar', 'Better safe than sorry', 'An ounce of prevention is worth a pound of cure', 'Don\'t judge a book by its cover', 'Easy come, easy go'),
+(109, 'Spanish', 'Sayings', 'A falta de pan, buenas son tortas', 'Make do with what you have', 'Beggars can\'t be choosers', 'Half a loaf is better than none', 'Time and tide wait for no man'),
+(110, 'Spanish', 'Sayings', 'El hábito no hace al monje', 'Clothes don\'t make the man', 'You can\'t judge a book by its cover', 'Don\'t cry over spilled milk', 'Still waters run deep'),
+(111, 'Spanish', 'Sayings', 'De tal palo, tal astilla', 'Like father, like son', 'The apple doesn\'t fall far from the tree', 'Cut from the same cloth', 'Two peas in a pod'),
+(112, 'Spanish', 'Sayings', 'El que mucho abarca, poco aprieta', 'Jack of all trades, master of none', 'You can\'t have it all', 'All that glitters is not gold', 'Don\'t bite off more than you can chew'),
+(113, 'Spanish', 'Sayings', 'Zapatero a tus zapatos', 'Stick to what you know', 'Mind your own business', 'To each their own', 'The pot calling the kettle black'),
+(114, 'Spanish', 'Sayings', 'Cuando una puerta se cierra, otra se abre', 'When one door closes, another opens', 'Every cloud has a silver lining', 'Opportunity knocks once', 'Hope springs eternal'),
+(115, 'Spanish', 'Sayings', 'El pez grande se come al chico', 'The big fish eats the little fish', 'Survival of the fittest', 'The early bird gets the worm', 'Easy come, easy go'),
+(116, 'Spanish', 'Sayings', 'Quien siembra vientos recoge tempestades', 'You reap what you sow', 'What goes around comes around', 'Sow the seeds of chaos', 'Ride out the storm'),
+(117, 'Spanish', 'Sayings', 'No todo lo que brilla es oro', 'Not everything that shines is gold', 'Appearances can be deceiving', 'All that glitters is not gold', 'Still waters run deep'),
+(118, 'Spanish', 'Sayings', 'Más vale pájaro en mano que ciento volando', 'A bird in the hand is worth two in the bush', 'One in the hand is better than two in the bush', 'You can\'t have it all', 'Easy come, easy go'),
+(119, 'Spanish', 'Sayings', 'Agua que no has de beber, déjala correr', 'Let bygones be bygones', 'Don\'t cry over spilled milk', 'What\'s done is done', 'Time heals all wounds'),
+(120, 'Spanish', 'Sayings', 'El tiempo lo cura todo', 'Time heals all wounds', 'Out of sight, out of mind', 'Forgive and forget', 'Live and let live'),
+(220, 'Japanese', 'Vocabulary', 'ohayou', 'good morning', 'good night', 'thank you', 'goodbye'),
+(221, 'Japanese', 'Vocabulary', 'konnichiwa', 'hello', 'goodbye', 'good morning', 'thank you'),
+(222, 'Japanese', 'Vocabulary', 'konbanwa', 'good evening', 'good afternoon', 'hello', 'good night'),
+(223, 'Japanese', 'Vocabulary', 'oyasuminasai', 'good night', 'good morning', 'goodbye', 'see you'),
+(224, 'Japanese', 'Vocabulary', 'arigatou', 'thank you', 'sorry', 'goodbye', 'please'),
+(225, 'Japanese', 'Vocabulary', 'sumimasen', 'excuse me', 'thank you', 'hello', 'good night'),
+(226, 'Japanese', 'Vocabulary', 'hai', 'yes', 'no', 'maybe', 'sure'),
+(227, 'Japanese', 'Vocabulary', 'iie', 'no', 'yes', 'sure', 'okay'),
+(228, 'Japanese', 'Vocabulary', 'onegai', 'please', 'thank you', 'sorry', 'hello'),
+(229, 'Japanese', 'Vocabulary', 'gomenasai', 'I\'m sorry', 'thank you', 'please', 'goodbye'),
+(230, 'Japanese', 'Vocabulary', 'daijoubu', 'I\'m okay', 'I\'m sorry', 'I\'m lost', 'I\'m hungry'),
+(231, 'Japanese', 'Vocabulary', 'wakarimasu', 'I understand', 'I don\'t know', 'I\'m sorry', 'I agree'),
+(232, 'Japanese', 'Vocabulary', 'wakarimasen', 'I don\'t understand', 'I know', 'I\'m tired', 'I agree'),
+(233, 'Japanese', 'Vocabulary', 'genki', 'healthy', 'angry', 'sad', 'hungry'),
+(234, 'Japanese', 'Vocabulary', 'byouki', 'sick', 'healthy', 'tired', 'hungry'),
+(235, 'Japanese', 'Vocabulary', 'tabetai', 'want to eat', 'want to sleep', 'want to go', 'want to see'),
+(236, 'Japanese', 'Vocabulary', 'nomitai', 'want to drink', 'want to eat', 'want to walk', 'want to sing'),
+(237, 'Japanese', 'Vocabulary', 'iku', 'go', 'come', 'see', 'stay'),
+(238, 'Japanese', 'Vocabulary', 'kuru', 'come', 'go', 'stay', 'leave'),
+(239, 'Japanese', 'Vocabulary', 'mimasu', 'see', 'hear', 'walk', 'talk'),
+(240, 'Japanese', 'Vocabulary', 'kikimasu', 'listen', 'see', 'walk', 'talk'),
+(241, 'Japanese', 'Vocabulary', 'hanashimasu', 'speak', 'listen', 'write', 'walk'),
+(242, 'Japanese', 'Vocabulary', 'yomimasu', 'read', 'write', 'speak', 'listen'),
+(243, 'Japanese', 'Vocabulary', 'kakimasu', 'write', 'read', 'draw', 'walk'),
+(244, 'Japanese', 'Vocabulary', 'kaimasu', 'buy', 'sell', 'read', 'write'),
+(245, 'Japanese', 'Vocabulary', 'urimasu', 'sell', 'buy', 'give', 'send'),
+(246, 'Japanese', 'Vocabulary', 'ageru', 'give', 'take', 'bring', 'call'),
+(247, 'Japanese', 'Vocabulary', 'toru', 'take', 'give', 'see', 'write'),
+(248, 'Japanese', 'Vocabulary', 'hashiru', 'run', 'walk', 'stand', 'sit'),
+(249, 'Japanese', 'Vocabulary', 'aruku', 'walk', 'run', 'stand', 'sleep'),
+(250, 'Japanese', 'Vocabulary', 'oyogu', 'swim', 'run', 'fly', 'dive'),
+(251, 'Japanese', 'Vocabulary', 'haneru', 'jump', 'run', 'fly', 'walk'),
+(252, 'Japanese', 'Vocabulary', 'miru', 'look', 'hear', 'touch', 'think'),
+(253, 'Japanese', 'Vocabulary', 'iu', 'say', 'hear', 'see', 'tell'),
+(254, 'Japanese', 'Vocabulary', 'omoimasu', 'think', 'know', 'say', 'listen'),
+(255, 'Japanese', 'Vocabulary', 'shiru', 'know', 'think', 'see', 'listen'),
+(256, 'Japanese', 'Vocabulary', 'wasureru', 'forget', 'remember', 'think', 'know'),
+(257, 'Japanese', 'Vocabulary', 'oboeru', 'remember', 'forget', 'think', 'learn'),
+(258, 'Japanese', 'Vocabulary', 'narau', 'learn', 'teach', 'forget', 'know'),
+(259, 'Japanese', 'Vocabulary', 'oshieru', 'teach', 'learn', 'speak', 'listen'),
+(260, 'Japanese', 'Vocabulary', 'au', 'meet', 'see', 'talk', 'call'),
+(261, 'Japanese', 'Vocabulary', 'deru', 'leave', 'enter', 'arrive', 'go'),
+(262, 'Japanese', 'Vocabulary', 'iru', 'exist (living)', 'exist (non-living)', 'stand', 'sit'),
+(263, 'Japanese', 'Vocabulary', 'aru', 'exist (non-living)', 'exist (living)', 'walk', 'sleep'),
+(264, 'Japanese', 'Vocabulary', 'suwaru', 'sit', 'stand', 'walk', 'sleep'),
+(265, 'Japanese', 'Vocabulary', 'tatsu', 'stand', 'sit', 'walk', 'sleep'),
+(266, 'Japanese', 'Vocabulary', 'neru', 'sleep', 'walk', 'stand', 'run'),
+(267, 'Japanese', 'Vocabulary', 'okiru', 'wake up', 'sleep', 'walk', 'run'),
+(268, 'Japanese', 'Vocabulary', 'kiru', 'wear', 'cut', 'sit', 'write'),
+(269, 'Japanese', 'Vocabulary', 'nugu', 'remove (clothes)', 'wear', 'cut', 'write'),
+(270, 'Japanese', 'Phrases', 'daijoubu desu ka', 'Are you okay?', 'Are you tired?', 'Are you ready?', 'Are you hungry?'),
+(271, 'Japanese', 'Phrases', 'genki desu ka', 'How are you?', 'Are you busy?', 'Are you sick?', 'Are you tired?'),
+(272, 'Japanese', 'Phrases', 'watashi wa gakusei desu', 'I am a student', 'I am a teacher', 'I am a worker', 'I am a doctor'),
+(273, 'Japanese', 'Phrases', 'kore wa nan desu ka', 'What is this?', 'Where is this?', 'How much is this?', 'Who is this?'),
+(274, 'Japanese', 'Phrases', 'doko desu ka', 'Where is it?', 'What is it?', 'How is it?', 'Why is it?'),
+(275, 'Japanese', 'Phrases', 'ikura desu ka', 'How much is it?', 'Where is it?', 'What is it?', 'Why is it?'),
+(276, 'Japanese', 'Phrases', 'itadakimasu', 'Let\'s eat', 'Thank you', 'Goodbye', 'Good night'),
+(277, 'Japanese', 'Phrases', 'gochisousama deshita', 'Thank you for the meal', 'Good night', 'Good morning', 'Goodbye'),
+(278, 'Japanese', 'Phrases', 'onegai shimasu', 'Please', 'Thank you', 'I\'m sorry', 'Hello'),
+(279, 'Japanese', 'Phrases', 'shitsurei shimasu', 'Excuse me', 'Goodbye', 'Hello', 'I\'m sorry'),
+(280, 'Japanese', 'Phrases', 'otsukaresama desu', 'Good work', 'Good morning', 'Good evening', 'Good night'),
+(281, 'Japanese', 'Phrases', 'ganbatte kudasai', 'Good luck', 'Goodbye', 'Be careful', 'Thank you'),
+(282, 'Japanese', 'Phrases', 'ki wo tsukete', 'Be careful', 'Goodbye', 'Good luck', 'Thank you'),
+(283, 'Japanese', 'Phrases', 'omedetou gozaimasu', 'Congratulations', 'Goodbye', 'Thank you', 'Good luck'),
+(284, 'Japanese', 'Phrases', 'tasukete kudasai', 'Please help', 'Please wait', 'Please go', 'Please stay'),
+(285, 'Japanese', 'Phrases', 'chotto matte kudasai', 'Please wait', 'Please go', 'Please stay', 'Please help'),
+(286, 'Japanese', 'Phrases', 'hai sou desu', 'Yes, it is', 'No, it isn\'t', 'Maybe', 'I\'m not sure'),
+(287, 'Japanese', 'Phrases', 'iie chigaimasu', 'No, that\'s wrong', 'Yes, that\'s right', 'Maybe', 'I don\'t know'),
+(288, 'Japanese', 'Phrases', 'wakarimashita', 'I understand', 'I don\'t know', 'I\'m sorry', 'I\'ll try'),
+(289, 'Japanese', 'Phrases', 'wakarimasen', 'I don\'t understand', 'I know', 'I\'m tired', 'I\'m ready'),
+(290, 'Japanese', 'Phrases', 'daijoubu desu', 'It\'s okay', 'I\'m sorry', 'It\'s bad', 'I\'m busy'),
+(291, 'Japanese', 'Phrases', 'onegaishimasu kudasai', 'Please', 'Thank you', 'Sorry', 'Hello'),
+(292, 'Japanese', 'Phrases', 'yokatta desu ne', 'I\'m glad', 'I\'m sorry', 'I\'m sad', 'I\'m happy'),
+(293, 'Japanese', 'Phrases', 'omoshiroi desu', 'It\'s interesting', 'It\'s boring', 'It\'s bad', 'It\'s strange'),
+(294, 'Japanese', 'Phrases', 'ureshii desu', 'I\'m happy', 'I\'m sad', 'I\'m angry', 'I\'m tired'),
+(295, 'Japanese', 'Phrases', 'sabishii desu', 'I\'m lonely', 'I\'m tired', 'I\'m happy', 'I\'m angry'),
+(296, 'Japanese', 'Phrases', 'kanashii desu', 'I\'m sad', 'I\'m happy', 'I\'m angry', 'I\'m excited'),
+(297, 'Japanese', 'Phrases', 'okashii desu', 'It\'s funny', 'It\'s strange', 'It\'s sad', 'It\'s scary'),
+(298, 'Japanese', 'Phrases', 'kowai desu', 'It\'s scary', 'It\'s funny', 'It\'s exciting', 'It\'s boring'),
+(299, 'Japanese', 'Sayings', 'hana yori dango', 'Substance over style', 'Style over substance', 'Food over friends', 'Beauty before brains'),
+(300, 'Japanese', 'Sayings', 'ichi-go ichi-e', 'Once in a lifetime', 'Once every year', 'Every month', 'Every day'),
+(301, 'Japanese', 'Sayings', 'saru mo ki kara ochiru', 'Everyone makes mistakes', 'Monkeys climb trees', 'Everyone is perfect', 'Trees are strong'),
+(302, 'Japanese', 'Sayings', 'shippai wa seikou no moto', 'Failure is the root of success', 'Success is the end', 'Failure is bad', 'No success without luck'),
+(303, 'Japanese', 'Sayings', 'nana korobi ya oki', 'Fall down seven times, get up eight', 'Fall and stay down', 'Get up once', 'Fall nine times'),
+(304, 'Japanese', 'Sayings', 'isogaba maware', 'Haste makes waste', 'Move fast always', 'Slow is bad', 'Speed is key'),
+(305, 'Japanese', 'Sayings', 'deru kugi wa utareru', 'The nail that sticks out gets hammered', 'The quiet wins', 'The brave lead', 'The fast run'),
+(306, 'Japanese', 'Sayings', 'en no shita no chikaramochi', 'Unsung hero', 'Strong leader', 'Silent fighter', 'Hidden master'),
+(307, 'Japanese', 'Sayings', 'kawaigatte wa ikenai', 'Don\'t spoil too much', 'Love a lot', 'Spoil forever', 'Trust everyone'),
+(308, 'Japanese', 'Sayings', 'yudan taiteki', 'Complacency is the enemy', 'Patience wins', 'Greed is good', 'Quiet is bad'),
+(309, 'Japanese', 'Sayings', 'inu mo arukeba bou ni ataru', 'Even dogs can find luck', 'Dogs bark', 'Dogs run', 'Dogs are noisy'),
+(310, 'Japanese', 'Sayings', 'juunin toiro', 'Ten people, ten colors', 'One color', 'One leader', 'Ten minds'),
+(311, 'Japanese', 'Sayings', 'ame futte ji katamaru', 'After rain, earth hardens', 'After rain, mud rises', 'No rain, no pain', 'Rain brings sadness'),
+(312, 'Japanese', 'Sayings', 'binbou hima nashi', 'Poor people are always busy', 'Rich are lazy', 'Busy people are poor', 'Money buys time'),
+(313, 'Japanese', 'Sayings', 'chiri mo tsumoreba yama to naru', 'Little things add up to big things', 'Small is weak', 'Big is strong', 'Small is nothing'),
+(314, 'Japanese', 'Sayings', 'ishi no ue ni mo san nen', 'Perseverance over time', 'Strong rocks', 'Three-year dream', 'Stone travels'),
+(315, 'Japanese', 'Sayings', 'keizoku wa chikara nari', 'Persistence is power', 'Strength is persistence', 'Patience is success', 'Calm wins'),
+(316, 'Japanese', 'Sayings', 'shiranai ga hotoke', 'Ignorance is bliss', 'Knowledge is power', 'Blindness is bad', 'Ignorance kills'),
+(317, 'Japanese', 'Sayings', 'hyoutan kara koma', 'Unexpected luck', 'Big from small', 'Small horses win', 'Big things arrive'),
+(318, 'Japanese', 'Sayings', 'neko ni koban', 'Pearls before swine', 'Gold to cats', 'Silver to fools', 'Jewels wasted'),
+(319, 'Japanese', 'Sayings', 'toukyou wa nichiyoubi', 'Tokyo is Sunday', 'Tokyo is cloudy', 'Tokyo is busy', 'Tokyo is sleeping'),
+(320, 'Japanese', 'Sayings', 'oyako mo tanin', 'Parent and child are strangers', 'Family is close', 'Parents always love', 'Children always listen'),
+(321, 'Japanese', 'Sayings', 'uchi no naka no bouken', 'Adventure inside home', 'Outside adventure', 'Home is boring', 'Inside is safe'),
+(322, 'Japanese', 'Sayings', 'mizu ni nagasu', 'Let bygones be bygones', 'Water flows backward', 'Water stands still', 'Water is deep'),
+(323, 'Japanese', 'Sayings', 'asatte no houkou', 'Wrong direction', 'Right choice', 'Slow road', 'Fast mistake'),
+(324, 'Japanese', 'Sayings', 'kaze ga fuite ookami ga warau', 'When wind blows, wolves laugh', 'Wind cries', 'Wolves dance', 'Wind talks'),
+(400, 'Portuguese', 'Vocabulary', 'amigo', 'friend', 'enemy', 'neighbor', 'boss'),
+(401, 'Portuguese', 'Vocabulary', 'casa', 'house', 'apartment', 'school', 'office'),
+(402, 'Portuguese', 'Vocabulary', 'livro', 'book', 'magazine', 'pen', 'pencil'),
+(403, 'Portuguese', 'Vocabulary', 'gato', 'cat', 'dog', 'rabbit', 'hamster'),
+(404, 'Portuguese', 'Vocabulary', 'cachorro', 'dog', 'cat', 'fish', 'bird'),
+(405, 'Portuguese', 'Vocabulary', 'mesa', 'table', 'chair', 'sofa', 'bed'),
+(406, 'Portuguese', 'Vocabulary', 'janela', 'window', 'door', 'roof', 'floor'),
+(407, 'Portuguese', 'Vocabulary', 'carro', 'car', 'bicycle', 'bus', 'train'),
+(408, 'Portuguese', 'Vocabulary', 'rua', 'street', 'park', 'market', 'school'),
+(409, 'Portuguese', 'Vocabulary', 'escola', 'school', 'university', 'work', 'gym'),
+(410, 'Portuguese', 'Vocabulary', 'trabalho', 'work', 'vacation', 'break', 'study'),
+(411, 'Portuguese', 'Vocabulary', 'familia', 'family', 'friends', 'team', 'class'),
+(412, 'Portuguese', 'Vocabulary', 'feliz', 'happy', 'sad', 'angry', 'tired'),
+(413, 'Portuguese', 'Vocabulary', 'triste', 'sad', 'happy', 'angry', 'excited'),
+(414, 'Portuguese', 'Vocabulary', 'rápido', 'fast', 'slow', 'careful', 'strong'),
+(415, 'Portuguese', 'Vocabulary', 'lento', 'slow', 'fast', 'weak', 'careful'),
+(416, 'Portuguese', 'Vocabulary', 'forte', 'strong', 'weak', 'soft', 'gentle'),
+(417, 'Portuguese', 'Vocabulary', 'fraco', 'weak', 'strong', 'tired', 'lazy'),
+(418, 'Portuguese', 'Vocabulary', 'bonito', 'beautiful', 'ugly', 'handsome', 'cute'),
+(419, 'Portuguese', 'Vocabulary', 'feio', 'ugly', 'beautiful', 'pretty', 'cute'),
+(420, 'Portuguese', 'Vocabulary', 'velho', 'old', 'young', 'new', 'modern'),
+(421, 'Portuguese', 'Vocabulary', 'jovem', 'young', 'old', 'teenager', 'child'),
+(422, 'Portuguese', 'Vocabulary', 'novo', 'new', 'old', 'modern', 'ancient'),
+(423, 'Portuguese', 'Vocabulary', 'frio', 'cold', 'hot', 'warm', 'cool'),
+(424, 'Portuguese', 'Vocabulary', 'quente', 'hot', 'cold', 'cool', 'warm'),
+(425, 'Portuguese', 'Vocabulary', 'chato', 'boring', 'fun', 'exciting', 'strange'),
+(426, 'Portuguese', 'Vocabulary', 'interessante', 'interesting', 'boring', 'fun', 'exciting'),
+(427, 'Portuguese', 'Vocabulary', 'caro', 'expensive', 'cheap', 'affordable', 'luxurious'),
+(428, 'Portuguese', 'Vocabulary', 'barato', 'cheap', 'expensive', 'affordable', 'discounted'),
+(429, 'Portuguese', 'Vocabulary', 'bom', 'good', 'bad', 'great', 'ok'),
+(430, 'Portuguese', 'Vocabulary', 'ruim', 'bad', 'good', 'terrible', 'fine'),
+(431, 'Portuguese', 'Vocabulary', 'rico', 'rich', 'poor', 'middle-class', 'affluent'),
+(432, 'Portuguese', 'Vocabulary', 'pobre', 'poor', 'rich', 'middle-class', 'working-class'),
+(433, 'Portuguese', 'Vocabulary', 'certo', 'right', 'wrong', 'correct', 'incorrect'),
+(434, 'Portuguese', 'Vocabulary', 'errado', 'wrong', 'right', 'incorrect', 'mistake'),
+(435, 'Portuguese', 'Vocabulary', 'grande', 'big', 'small', 'huge', 'tiny'),
+(436, 'Portuguese', 'Vocabulary', 'pequeno', 'small', 'big', 'tiny', 'average'),
+(437, 'Portuguese', 'Vocabulary', 'alto', 'high', 'low', 'tall', 'short'),
+(438, 'Portuguese', 'Vocabulary', 'baixo', 'low', 'high', 'short', 'tall'),
+(439, 'Portuguese', 'Vocabulary', 'difícil', 'difficult', 'easy', 'hard', 'complicated'),
+(440, 'Portuguese', 'Vocabulary', 'fácil', 'easy', 'difficult', 'simple', 'complicated'),
+(441, 'Portuguese', 'Vocabulary', 'luz', 'light', 'dark', 'flash', 'lamp'),
+(442, 'Portuguese', 'Vocabulary', 'escuro', 'dark', 'light', 'dim', 'bright'),
+(443, 'Portuguese', 'Vocabulary', 'limpo', 'clean', 'dirty', 'messy', 'organized'),
+(444, 'Portuguese', 'Vocabulary', 'sujo', 'dirty', 'clean', 'messy', 'untidy'),
+(445, 'Portuguese', 'Vocabulary', 'rico', 'rich', 'poor', 'wealthy', 'financially-stable'),
+(446, 'Portuguese', 'Vocabulary', 'pobre', 'poor', 'rich', 'wealthy', 'financially-challenged'),
+(447, 'Portuguese', 'Vocabulary', 'sorriso', 'smile', 'frown', 'laugh', 'expression'),
+(448, 'Portuguese', 'Vocabulary', 'olhos', 'eyes', 'nose', 'ears', 'mouth'),
+(449, 'Portuguese', 'Vocabulary', 'mão', 'hand', 'foot', 'head', 'arm'),
+(450, 'Portuguese', 'Phrases', 'Como vai?', 'How are you?', 'Where are you going?', 'What time is it?', 'Where do you live?'),
+(451, 'Portuguese', 'Phrases', 'Qual é o seu nome?', 'What is your name?', 'Where are you from?', 'How old are you?', 'What do you do?'),
+(452, 'Portuguese', 'Phrases', 'Onde você mora?', 'Where do you live?', 'Where are you from?', 'How long have you been here?', 'What is your address?'),
+(453, 'Portuguese', 'Phrases', 'Quanto custa?', 'How much does it cost?', 'What is the price?', 'Is this on sale?', 'How expensive is this?'),
+(454, 'Portuguese', 'Phrases', 'Você fala inglês?', 'Do you speak English?', 'Do you understand?', 'What language do you speak?', 'Can you help me?'),
+(455, 'Portuguese', 'Phrases', 'Estou perdido', 'I\'m lost', 'Where is the bathroom?', 'Can you show me the way?', 'I don\'t know the way'),
+(456, 'Portuguese', 'Phrases', 'Onde está o banheiro?', 'Where is the bathroom?', 'How far is it?', 'Is there a restroom here?', 'Can you tell me the way?'),
+(457, 'Portuguese', 'Phrases', 'Você pode me ajudar?', 'Can you help me?', 'Where is it?', 'Do you need help?', 'Can you speak slower?'),
+(458, 'Portuguese', 'Phrases', 'Eu não entendi', 'I didn\'t understand', 'Can you repeat?', 'I don\'t speak Portuguese', 'What did you say?'),
+(459, 'Portuguese', 'Phrases', 'Como se diz isso em português?', 'How do you say that in Portuguese?', 'What is the translation?', 'How do you pronounce this?', 'Can you spell it?'),
+(460, 'Portuguese', 'Phrases', 'Você pode falar mais devagar?', 'Can you speak slower?', 'Do you understand?', 'What time is it?', 'Where are we?'),
+(461, 'Portuguese', 'Phrases', 'Quantos anos você tem?', 'How old are you?', 'Where are you from?', 'When is your birthday?', 'How long have you been here?'),
+(462, 'Portuguese', 'Phrases', 'Eu tenho... anos', 'I am... years old', 'I am 20 years old', 'I am 25 years old', 'I am 30 years old'),
+(463, 'Portuguese', 'Phrases', 'Onde fica o hotel?', 'Where is the hotel?', 'How do I get to the hotel?', 'Where is the restaurant?', 'Where can I find a taxi?'),
+(464, 'Portuguese', 'Phrases', 'Pode me dar um desconto?', 'Can you give me a discount?', 'How much for this?', 'Is this on sale?', 'How much do I owe you?'),
+(465, 'Portuguese', 'Phrases', 'Eu quero um café', 'I want a coffee', 'I need water', 'Can I have tea?', 'I\'d like a juice'),
+(466, 'Portuguese', 'Phrases', 'Você gosta de música?', 'Do you like music?', 'What kind of music do you like?', 'Do you play any instruments?', 'What is your favorite song?'),
+(467, 'Portuguese', 'Phrases', 'Que horas são?', 'What time is it?', 'What is the date today?', 'What time do you wake up?', 'What is your schedule?'),
+(468, 'Portuguese', 'Phrases', 'Qual é o seu hobby?', 'What is your hobby?', 'What do you do in your free time?', 'Do you have any hobbies?', 'What do you enjoy doing?'),
+(469, 'Portuguese', 'Phrases', 'Você tem irmãos?', 'Do you have siblings?', 'How many brothers do you have?', 'Are you an only child?', 'How old are your siblings?'),
+(470, 'Portuguese', 'Phrases', 'Eu tenho um irmão', 'I have a brother', 'I don\'t have any siblings', 'I have two sisters', 'I have a cousin'),
+(471, 'Portuguese', 'Phrases', 'Vamos sair hoje?', 'Shall we go out today?', 'Do you want to hang out?', 'Where are we going?', 'What time are we meeting?'),
+(472, 'Portuguese', 'Phrases', 'O que você faz da vida?', 'What do you do for a living?', 'What is your job?', 'Where do you work?', 'Do you enjoy your job?'),
+(473, 'Portuguese', 'Phrases', 'Como está o tempo?', 'How is the weather?', 'Is it sunny?', 'Is it cold?', 'Is it raining?'),
+(474, 'Portuguese', 'Phrases', 'Eu estou com fome', 'I am hungry', 'I need food', 'What’s for dinner?', 'Let’s eat'),
+(475, 'Portuguese', 'Phrases', 'Você tem um plano?', 'Do you have a plan?', 'Where are we going?', 'When are we leaving?', 'What time are we meeting?'),
+(476, 'Portuguese', 'Phrases', 'Me desculpe', 'I\'m sorry', 'Excuse me', 'Pardon me', 'Sorry for the trouble'),
+(477, 'Portuguese', 'Phrases', 'Eu não posso ir hoje', 'I can\'t go today', 'I\'m busy today', 'I have plans today', 'I’m unavailable today'),
+(478, 'Portuguese', 'Phrases', 'Vamos lá!', 'Let\'s go!', 'Come on!', 'Hurry up!', 'Let’s do it!'),
+(479, 'Portuguese', 'Phrases', 'Eu preciso descansar', 'I need to rest', 'I’m tired', 'Can I take a break?', 'Let’s relax'),
+(480, 'Portuguese', 'Phrases', 'Onde você vai?', 'Where are you going?', 'What are you doing?', 'What’s the plan?', 'Where are we heading?'),
+(490, 'Portuguese', 'Sayings', 'Água mole em pedra dura tanto bate até que fura', 'Soft water hitting hard stone will eventually make a hole', 'Slow and steady wins the race', 'Persistence breaks resistance', 'Little by little, things get done'),
+(491, 'Portuguese', 'Sayings', 'Quem com ferro fere, com ferro será ferido', 'He who wounds with iron will be wounded by iron', 'What goes around comes around', 'Karma will catch up with you', 'You reap what you sow'),
+(492, 'Portuguese', 'Sayings', 'De grão em grão, a galinha enche o papo', 'Grain by grain, the chicken fills its belly', 'Slow progress adds up', 'Little by little, we get there', 'Step by step, you make progress'),
+(493, 'Portuguese', 'Sayings', 'Em boca fechada não entra mosca', 'A closed mouth doesn’t let flies in', 'Keep quiet to avoid trouble', 'Silence is golden', 'Don’t speak unless necessary'),
+(494, 'Portuguese', 'Sayings', 'Mais vale um pássaro na mão do que dois voando', 'A bird in the hand is worth more than two flying', 'Better safe than sorry', 'Take what you can get', 'Don’t risk losing what you have'),
+(495, 'Portuguese', 'Sayings', 'Quem não arrisca, não petisca', 'He who doesn’t take risks, doesn’t snack', 'No risk, no reward', 'If you don’t try, you won’t win', 'You have to take chances to succeed'),
+(496, 'Portuguese', 'Sayings', 'A pressa é inimiga da perfeição', 'Haste is the enemy of perfection', 'Don’t rush things', 'Slow and steady wins the race', 'Take your time to do it right'),
+(497, 'Portuguese', 'Sayings', 'Cão que ladra não morde', 'A dog that barks doesn’t bite', 'Talk is cheap', 'Those who talk a lot do nothing', 'Actions speak louder than words'),
+(498, 'Portuguese', 'Sayings', 'Quem tem boca vai a Roma', 'He who has a mouth goes to Rome', 'Where there’s a will, there’s a way', 'You can achieve anything if you try', 'Don’t give up'),
+(499, 'Portuguese', 'Sayings', 'Águas passadas não movem moinhos', 'Past waters don’t move mills', 'Let bygones be bygones', 'The past is the past', 'Don’t dwell on past mistakes'),
+(500, 'Portuguese', 'Sayings', 'Mente vazia, oficina do diabo', 'An empty mind is the devil’s workshop', 'Idleness is the root of trouble', 'A busy mind is a happy mind', 'Stay busy to avoid trouble'),
+(501, 'Portuguese', 'Sayings', 'Quem tudo quer, tudo perde', 'He who wants everything loses everything', 'Don’t be greedy', 'You can’t have it all', 'Learn to accept limitations'),
+(502, 'Portuguese', 'Sayings', 'Quem tem, tem medo; quem não tem, tem mais medo', 'He who has, is afraid; he who doesn’t, is even more afraid', 'Fear is present for everyone', 'Those with nothing fear losing everything', 'Fear is a universal feeling'),
+(503, 'Portuguese', 'Sayings', 'Casa de ferreiro, espeto de pau', 'The blacksmith’s house has a wooden skewer', 'We often neglect our own problems while solving others’', 'Practice what you preach', 'Don’t forget to take care of your own things'),
+(504, 'Portuguese', 'Sayings', 'Longe dos olhos, longe do coração', 'Out of sight, out of mind', 'Absence makes the heart grow fonder', 'When you don’t see someone, you forget about them', 'Distance cools relationships'),
+(505, 'Portuguese', 'Sayings', 'O peixe morre pela boca', 'The fish dies by its mouth', 'Keep your secrets to yourself', 'Loose lips sink ships', 'Talking too much brings trouble'),
+(506, 'Portuguese', 'Sayings', 'Santo de casa não faz milagre', 'A saint from home doesn’t perform miracles', 'People don’t value those close to them', 'Familiarity breeds contempt', 'Don’t expect too much from the ones closest to you'),
+(507, 'Portuguese', 'Sayings', 'Quem espera sempre alcança', 'He who waits always achieves', 'Patience is a virtue', 'Good things come to those who wait', 'Perseverance leads to success'),
+(508, 'Portuguese', 'Sayings', 'Coração de mãe é sempre grande', 'A mother’s heart is always big', 'A mother’s love is limitless', 'Mothers are always forgiving', 'A mother’s love has no bounds'),
+(509, 'Portuguese', 'Sayings', 'Ninguém é profeta em sua terra', 'No one is a prophet in their own land', 'You’re not appreciated in your own hometown', 'People close to you often overlook your value', 'Success is often not recognized locally'),
+(510, 'Portuguese', 'Sayings', 'A esperança é a última que morre', 'Hope is the last thing to die', 'Never give up', 'As long as there’s hope, there’s a chance', 'Hope is the last refuge'),
+(511, 'Portuguese', 'Sayings', 'O barato sai caro', 'What’s cheap ends up expensive', 'You get what you pay for', 'Cheap things often have hidden costs', 'It’s better to pay for quality than regret the price'),
+(512, 'Portuguese', 'Sayings', 'Vão-se os anéis, ficam os dedos', 'The rings go, but the fingers stay', 'You may lose things, but the important things remain', 'You may lose the small stuff, but the big stuff stays', 'Life goes on even after loss'),
+(513, 'Portuguese', 'Sayings', 'Sorte no jogo, azar no amor', 'Luck in the game, bad luck in love', 'You can’t have it all', 'When things go well in one area, they may go wrong in another', 'Life’s balance'),
+(514, 'Portuguese', 'Sayings', 'O que os olhos não veem, o coração não sente', 'What the eyes don’t see, the heart doesn’t feel', 'Out of sight, out of mind', 'Ignorance is bliss', 'What you don’t know won’t hurt you'),
+(515, 'Portuguese', 'Sayings', 'Cuidado com o que você deseja, pode se tornar realidade', 'Be careful with what you wish for, it may come true', 'Be careful what you wish for', 'Your desires may come to you', 'Watch what you wish for'),
+(516, 'Portuguese', 'Sayings', 'Deus ajuda quem cedo madruga', 'God helps those who wake up early', 'The early bird catches the worm', 'Start your day early to succeed', 'The early riser achieves more'),
+(517, 'Portuguese', 'Sayings', 'Quem tem fome, tem pressa', 'He who is hungry, is in a hurry', 'When you need something, you become impatient', 'Hunger makes you rush', 'Desperation leads to haste'),
+(518, 'Portuguese', 'Sayings', 'Devagar se vai ao longe', 'Slowly, one goes far', 'Patience brings success', 'Slow and steady wins the race', 'Take your time to reach your goals'),
+(519, 'Portuguese', 'Sayings', 'A noite é uma criança', 'The night is young', 'The night is full of possibilities', 'It’s never too late to have fun', 'The evening is always young');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leaderboards`
+--
+
+CREATE TABLE `leaderboards` (
+  `name` varchar(12) NOT NULL,
+  `score` int(11) NOT NULL,
+  `lang` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `leaderboards`
+--
+
+INSERT INTO `leaderboards` (`name`, `score`, `lang`) VALUES
+('Emi29', 58, 'Spanish'),
+('Sora97', 114, 'Spanish'),
+('Leo80', 140, 'Spanish'),
+('Noa65', 85, 'Spanish'),
+('Tomo14', 146, 'Portuguese'),
+('Leo83', 116, 'Japanese'),
+('Nina13', 75, 'Spanish'),
+('Kenji77', 96, 'Japanese'),
+('Riko33', 85, 'Spanish'),
+('Alex14', 39, 'Portuguese'),
+('Sam77', 127, 'Spanish'),
+('Noa74', 73, 'Japanese'),
+('Yuki5', 48, 'Portuguese'),
+('Tomo18', 71, 'Portuguese'),
+('Riko72', 108, 'Portuguese'),
+('Sora65', 68, 'Japanese'),
+('Kenji83', 77, 'Portuguese'),
+('Alex44', 43, 'Japanese'),
+('Aki96', 73, 'Japanese'),
+('Nina73', 71, 'Portuguese'),
+('Nina33', 142, 'Portuguese'),
+('Noa63', 17, 'Portuguese'),
+('Emi59', 145, 'Japanese'),
+('Kai54', 107, 'Portuguese'),
+('Sami20', 136, 'Japanese'),
+('Sami79', 110, 'Spanish'),
+('Riko3', 10, 'Japanese'),
+('Mia29', 28, 'Spanish'),
+('Aria34', 71, 'Japanese'),
+('Mia69', 103, 'Spanish'),
+('Kai84', 104, 'Portuguese'),
+('Aria50', 81, 'Spanish'),
+('Ren55', 43, 'Japanese'),
+('Luna32', 74, 'Spanish'),
+('Aki2', 101, 'Japanese'),
+('Yuki31', 33, 'Japanese'),
+('Noa30', 53, 'Japanese'),
+('Ren11', 78, 'Spanish'),
+('Kai13', 46, 'Spanish'),
+('Rio59', 150, 'Spanish'),
+('Riko30', 59, 'Japanese'),
+('Kenji86', 90, 'Spanish'),
+('Nina49', 138, 'Japanese'),
+('Tomo81', 81, 'Portuguese'),
+('Ren39', 122, 'Portuguese'),
+('Ren86', 12, 'Japanese'),
+('Sora19', 149, 'Spanish'),
+('Sami4', 110, 'Spanish'),
+('Alex64', 51, 'Portuguese'),
+('Sora70', 60, 'Portuguese'),
+('Sam60', 123, 'Spanish'),
+('Sam25', 92, 'Portuguese'),
+('Sora96', 93, 'Japanese'),
+('Noa32', 113, 'Japanese'),
+('Hana29', 85, 'Portuguese'),
+('Sora91', 30, 'Portuguese'),
+('Kai59', 115, 'Japanese'),
+('Yuki32', 77, 'Portuguese'),
+('Yuki12', 43, 'Portuguese'),
+('Tomo13', 74, 'Japanese'),
+('Kenji83', 47, 'Spanish'),
+('Kenji47', 71, 'Spanish'),
+('Luna88', 144, 'Portuguese'),
+('Hana15', 116, 'Spanish'),
+('Rio53', 109, 'Portuguese'),
+('Rio25', 107, 'Japanese'),
+('Sora7', 107, 'Japanese'),
+('Kenji27', 95, 'Portuguese'),
+('Leo72', 148, 'Portuguese'),
+('Luna90', 119, 'Portuguese'),
+('Noa7', 70, 'Portuguese'),
+('Aki54', 136, 'Spanish'),
+('Kenji90', 149, 'Portuguese'),
+('Riko90', 113, 'Spanish'),
+('Ren35', 139, 'Japanese'),
+('Noa58', 12, 'Portuguese'),
+('Emi39', 98, 'Spanish'),
+('Noa17', 99, 'Spanish'),
+('Yuki82', 44, 'Japanese'),
+('Ren83', 49, 'Japanese'),
+('Kenji93', 12, 'Portuguese'),
+('Noa84', 15, 'Portuguese'),
+('Emi66', 49, 'Spanish'),
+('Aki48', 98, 'Portuguese'),
+('Hana38', 80, 'Japanese'),
+('Sora37', 114, 'Japanese'),
+('Mia9', 49, 'Portuguese'),
+('Sam85', 120, 'Japanese'),
+('Noa56', 101, 'Portuguese'),
+('Aria70', 143, 'Japanese'),
+('Tomo65', 21, 'Japanese'),
+('Luna54', 59, 'Japanese'),
+('Alex1', 124, 'Spanish'),
+('Ren33', 147, 'Japanese'),
+('Mia30', 45, 'Japanese'),
+('Sora97', 57, 'Portuguese'),
+('Sora17', 129, 'Portuguese'),
+('Sora17', 148, 'Spanish'),
+('Hana6', 48, 'Portuguese'),
+('Emi21', 119, 'Japanese'),
+('findme', 1, 'Spanish'),
+('Test', 0, 'Spanish'),
+('Jamess', 13, 'Spanish'),
+('ivangwapo', 53, 'Japanese');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pinnedlessons`
+--
+
+CREATE TABLE `pinnedlessons` (
+  `id` int(11) NOT NULL,
+  `languagedata_id` int(11) NOT NULL,
+  `notes` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pinnedlessons`
+--
+
+INSERT INTO `pinnedlessons` (`id`, `languagedata_id`, `notes`) VALUES
+(2, 25, 'estudiar ta bro'),
+(3, 254, NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `languagedata`
+--
+ALTER TABLE `languagedata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pinnedlessons`
+--
+ALTER TABLE `pinnedlessons`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `languagedata_id` (`languagedata_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `languagedata`
+--
+ALTER TABLE `languagedata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=520;
+
+--
+-- AUTO_INCREMENT for table `pinnedlessons`
+--
+ALTER TABLE `pinnedlessons`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pinnedlessons`
+--
+ALTER TABLE `pinnedlessons`
+  ADD CONSTRAINT `pinnedlessons_ibfk_1` FOREIGN KEY (`languagedata_id`) REFERENCES `languagedata` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

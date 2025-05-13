@@ -1,0 +1,76 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="BarChartManager">
+			<method name="ShowAverageScore"/>
+			<method name="ShowPopularLanguage"/>
+			<method name="ShowScoreDistribution"/>
+		</type>
+		<type fullname="DatabaseScript">
+			<method name="addLeaderBoard"/>
+			<method name="pinLesson"/>
+		</type>
+		<type fullname="MenuManager">
+			<method name="BookOpen"/>
+			<method name="DLeft"/>
+			<method name="DRight"/>
+			<method name="ExitGame"/>
+			<method name="LangLeft"/>
+			<method name="LangRight"/>
+			<method name="Leaderboardsbtn"/>
+			<method name="LoaderPL"/>
+			<method name="Playbutton"/>
+			<method name="PLessonsbtn"/>
+			<method name="PLessonsbtn"/>
+			<method name="PLessonsbtn"/>
+			<method name="ShowAnalytics"/>
+			<method name="ShowMenu"/>
+			<method name="StartQuiz"/>
+			<method name="StartQuiz"/>
+			<method name="ViewNotesBtn"/>
+		</type>
+		<type fullname="PinnedLessonSearch">
+			<method name="ClearSearchBar"/>
+		</type>
+		<type fullname="SmallMenuScript">
+			<method name="aysHide"/>
+			<method name="aysNoteCancel"/>
+			<method name="aysResetLB"/>
+			<method name="aysUnpin"/>
+			<method name="aysYesBtnClick"/>
+			<method name="HideBtn"/>
+			<method name="HideBtn"/>
+			<method name="ShowBtn"/>
+		</type>
+		<type fullname="TextInputManager">
+			<method name="grabText"/>
+			<method name="grabText"/>
+			<method name="SaveNote"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">
+			<method name="OnAction"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+</linker>
